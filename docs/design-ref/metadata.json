@@ -1,0 +1,6 @@
+{
+  "name": "GitHub 加速下载器",
+  "description": "简约现代风格的 GitHub 资源加速下载桌面端工具，支持 Clash 代理智能检测、镜像加速源、多线程下载与深色模式。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
