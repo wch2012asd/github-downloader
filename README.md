@@ -66,7 +66,6 @@ v2/                 v2.x 正式版（Rust + egui）
 legacy/             v1.0（Python）归档，仅作回退保留
   main.py           v1 界面与主程序
   build.py          v1 PyInstaller 打包脚本
-docs/               设计文档与设计参考源码
 ```
 
 v1 回退方式：`cd legacy` 后按原方式运行（需 Python 3.10+ 与依赖安装，见 `legacy/requirements.txt`）。

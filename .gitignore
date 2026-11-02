@@ -23,3 +23,6 @@ Thumbs.db
 
 # 本地协作准则，不上传
 AGENTS.md
+
+# 本地文档，不入库
+docs/
