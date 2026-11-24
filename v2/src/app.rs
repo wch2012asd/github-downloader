@@ -172,7 +172,7 @@ impl App {
     fn finalize_new(&mut self, tx: Sender<UiEvent>) {
         self.auto_open = self.config.auto_open;
         self.refresh_disk_free();
-        self.push_log(LogLevel::Info, "欢迎使用 GitHub 加速下载器，粘贴链接即可开始");
+        self.push_log(LogLevel::Info, "欢迎使用极涌 VortexDL，粘贴链接即可开始");
 
         // 代理巡检线程
         let tx_proxy = tx.clone();
@@ -803,7 +803,7 @@ impl App {
                 ui.image(egui::load::SizedTexture::new(tex, Vec2::splat(22.0)));
             }
             ui.label(
-                RichText::new("GitHub 加速下载器")
+                RichText::new("极涌 VortexDL")
                     .strong()
                     .size(13.0)
                     .color(th.text),
@@ -1704,7 +1704,7 @@ impl App {
             return;
         }
         if let Some(path) = rfd::FileDialog::new()
-            .set_file_name("github-downloader-log.txt")
+            .set_file_name("vortexdl-log.txt")
             .save_file()
         {
             match std::fs::write(&path, lines.join("\n")) {

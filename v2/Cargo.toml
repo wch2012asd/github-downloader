@@ -1,12 +1,12 @@
 [package]
-name = "github_downloader"
+name = "vortexdl"
 version = "2.1.0"
 edition = "2024"
-description = "GitHub 加速下载器 v2.0（Rust 重构）"
+description = "极涌 VortexDL——GitHub 加速下载器（Rust）"
 license = "MIT"
 
 [[bin]]
-name = "GitHubDownloader"
+name = "VortexDL"
 path = "src/main.rs"
 
 [dependencies]

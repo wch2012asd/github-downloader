@@ -9,7 +9,7 @@ fn main() {
         .set_icon("assets/app_icon.ico")
         .set_manifest(r##"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
-  <assemblyIdentity type="win32" name="GitHubDownloader" version="2.0.0.0"/>
+  <assemblyIdentity type="win32" name="VortexDL" version="2.1.0.0"/>
   <application xmlns="urn:schemas-microsoft-com:asm.v3">
     <windowsSettings>
       <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true/pm</dpiAware>

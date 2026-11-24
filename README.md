@@ -1,6 +1,6 @@
-# GitHub 加速下载器
+# 极涌 VortexDL
 
-通过 Clash 本地代理、镜像节点或直连通道，加速下载 GitHub 资源与任意 http(s) 直链文件（官网安装包、CDN 文件等）的 Windows 桌面工具。
+通过 Clash 本地代理、镜像节点或直连通道，加速下载 GitHub 资源与任意 http(s) 直链文件（官网安装包、CDN 文件等）的 Windows 桌面工具（GitHub 加速下载器）。
 
 **当前正式版：[v2.1.0](../../releases)（Rust + egui）**，源码位于 [`v2/`](v2/)。v1.0（Python）已归档至 [`legacy/`](legacy/)，仅作回退保留。
 
@@ -25,7 +25,7 @@
 ```bat
 cd v2
 cargo build --release
-target\release\GitHubDownloader.exe
+target\release\VortexDL.exe
 ```
 
 国内网络若依赖拉取失败：项目已内置 rsproxy 镜像配置（`v2/.cargo/config.toml`，海外环境可删）；仍失败时给 cargo 挂上本地代理环境变量（如 Clash）`set HTTPS_PROXY=http://127.0.0.1:7897` 后重试。

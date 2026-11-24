@@ -18,7 +18,7 @@ use serde::{Deserialize, Serialize};
 use crate::core::url_parser::percent_decode;
 use crate::events::{LogLevel, Progress, UiEvent};
 
-pub const USER_AGENT: &str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GitHubDownloader/2.0";
+pub const USER_AGENT: &str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) VortexDL/2.1";
 
 const MAX_ATTEMPTS: u32 = 8; // 首次下载 + 最多 7 次自动重试（对齐 v1）
 const RETRY_DELAY: Duration = Duration::from_secs(5);
