@@ -29,3 +29,8 @@ docs/
 
 # 本地工具脚本，不入库
 scripts/
+
+# v3 Tauri/Vue 工程
+node_modules/
+/src-tauri/target/
+/src-tauri/gen/

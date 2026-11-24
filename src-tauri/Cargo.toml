@@ -1,0 +1,35 @@
+[package]
+name = "vortexdl"
+version = "3.0.0-dev"
+description = "极涌 VortexDL——通用多协议下载引擎"
+edition = "2021"
+
+[lib]
+name = "vortexdl_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-single-instance = "2"
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# 下载器刻意不启用 gzip/brotli 等解压特性：必须拿到与 Content-Length 一致的原始字节，
+# 否则 Range/断点续传的偏移语义会被破坏（沿用 v2 约束）。TLS 用系统证书库，兼容企业代理。
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "default-tls"] }
+winreg = "0.52"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+uuid = { version = "1", features = ["v4"] }
+# 运行时查询为主（免 offline prepare 工作流）；macros 仅为 FromRow 派生
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "macros"] }
+# BT 引擎：磁力/.torrent、DHT、UPnP（纯 Rust；默认完成即停做种见 engine/bt.rs）
+librqbit = "9.1"
+anyhow = "1"
+
+[profile.release]
+lto = "thin"
+strip = true
+codegen-units = 1

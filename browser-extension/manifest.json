@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "极涌 VortexDL 下载接管",
+  "version": "1.1.0",
+  "description": "将浏览器下载默认转交给 VortexDL 桌面下载器（多线程分块加速）",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://*.chatgpt.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_page": "options.html"
+}

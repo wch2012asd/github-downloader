@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body { font-family: 'Microsoft YaHei', sans-serif; padding: 16px; width: 360px; font-size: 13px; color: #1f2937; }
+      label { display: block; font-weight: 600; margin: 12px 0 4px; }
+      input { width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid #d1d5db; border-radius: 6px; }
+      button { margin-top: 16px; padding: 7px 16px; background: #2563eb; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+      .hint { color: #6b7280; font-size: 12px; margin-top: 12px; line-height: 1.6; }
+    </style>
+  </head>
+  <body>
+    <h3>极涌 VortexDL 下载接管设置</h3>
+    <label for="port">VortexDL 接管端口</label>
+    <input id="port" type="number" placeholder="24556" />
+    <label for="token">接管 Token（设置 → BitTorrent/P2P 同页显示）</label>
+    <input id="token" type="text" placeholder="在 VortexDL 设置中复制" />
+    <button id="save">保存</button>
+    <button id="test" style="margin-left: 8px; background: #6b7280;">测试连接</button>
+    <p id="test-result" style="margin: 8px 0 0; font-weight: 600;"></p>
+    <p class="hint">
+      使用方法：VortexDL 桌面端运行中 → 本页填入端口与 Token → 浏览器所有新下载将自动转交 VortexDL 多线程引擎。
+      扩展图标角标：✓ 转交成功；! 转交失败（VortexDL 未运行或 Token 不符）。
+      <br />Edge 用户注意：扩展详情页 →「站点访问权限」需手动开启 http://127.0.0.1/*，否则转发会被浏览器拦截。
+    </p>
+    <script src="options.js"></script>
+  </body>
+</html>
